@@ -1,0 +1,111 @@
+/* CSS for menu page */
+* { box-sizing: border-box; }
+
+#wrapper { width: 80%;
+           max-width: 1170px;
+           min-width: 600px;
+           margin-left: auto;
+           margin-right: auto;
+           padding-left: 16px;
+           padding-right: 16px;
+           border: 1px solid #000099;
+           box-shadow: 2px 2px;
+           background-color: #6ACBDE;
+
+}
+.menu-page {font-family: sans-serif;
+            font-size: 14px;
+}
+
+.menu-group-heading {margin: 0;
+                     padding-bottom: 1em;
+                     border-bottom: 2px solid;
+
+}
+
+.menu-group { display: grid;
+              grid-template-columns: 1fr;
+              gap: 1.5em;
+              padding: 1.5em 0;
+}
+
+@media screen and (min-width:992px){
+  .menu-page{
+    font-size: 16px;
+  }
+  .menu-group{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-text{
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content:space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+}
+
+.menu-item-description {
+  line-height: 16px;
+}
+.social-media {
+       width: 200px;
+       text-align: center;
+       opacity: .4;
+       margin: auto;
+}
+.social-media img{
+       height: 20px;
+       margin: 0 14px;
+}
+
+nav ul {flex: 1;
+        text-align: right;
+}
+nav li { display: inline-block;
+         margin: 0 25px;
+         list-style: none;
+}
+nav li a {text-decoration: none;
+          padding: 0 1px;
+          color: #000000;
+}
+nav {
+  position:relative;
+}
+nav ul ul{
+  position: absolute;
+  padding: 0; text-align: left; display: none;
+}
+nav ul ul li {
+  background-color: #FFCCCC;
+  border: 1px solid #00005D;
+  display: block; width: 8em;
+  padding-left: 1em; margin-left: 0;
+}
+nav li:hover ul {
+  display: block;
+}
